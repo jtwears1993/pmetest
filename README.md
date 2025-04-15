@@ -9,6 +9,7 @@ I don’t believe full-featured frameworks like Gin or Echo offer meaningful per
 python
 Copy
 Edit
+```
 .
 ├── cmd/
 │   └── api/                # Entry point: server, routes, middleware, handlers, config 
@@ -18,6 +19,7 @@ Edit
 │   ├── request/            # Request parsing & validation structs
 │   └── response/           # Response formatting & helper logic
 └── go.mod / go.sum         # Go module files
+```
 
 🔧 cmd/api/: Transport Layer
 
