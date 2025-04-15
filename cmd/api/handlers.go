@@ -38,14 +38,9 @@ func (app *application) itineraryHandler(w http.ResponseWriter, r *http.Request)
 		app.serverError(w, r, err)
 	}
 
-	headers := http.Header{
-		"Content-Type": {"application/json"},
-	}
-
-	err = response.JSONWithHeaders(w,
+	err = response.JSON(w,
 		http.StatusOK,
-		itinerary,
-		headers)
+		itinerary)
 	if err != nil {
 		app.logger.Error("error marshaling itinerary response", slog.String("err", err.Error()))
 		app.serverError(w, r, err)
